@@ -1,0 +1,33 @@
+{
+
+  "esversion": 6,
+
+  "curly": true,
+
+  "eqeqeq": false,
+
+  "futurehostile": true,
+
+  "notypeof": true,
+
+  "shadow": "inner",
+
+  "strict": "implied",
+
+  "undef": true,
+
+  "unused": true,
+
+  "asi": true,
+
+  "browser": true,
+
+  "devel": true,
+
+  "node": true,
+
+  "module": true,
+
+  "jquery": true
+
+}
