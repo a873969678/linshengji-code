@@ -5,6 +5,7 @@
  <p>1.cnpm i linshengji-code -S</p >
  <p>2.import codes from '@/code'</p >
  <p><codes /></p >
+  ![Image](https://raw.githubusercontent.com/a873969678/linshengji-code/master/src/assets/demo.png)
 </div>
 
 ## 组件参数
