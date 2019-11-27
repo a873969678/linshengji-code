@@ -1,7 +1,7 @@
 <template>
   <div class="codeY">
     <div class="container">
-      <div id="captcha" style="position: relative"/>
+      <div id="captcha" />
       <div id="msg"/>
     </div>
   </div>
@@ -12,6 +12,14 @@ export default {
     success: {
       type: Function,
       default: () => {}
+    },
+    width: {
+      type: Number,
+      default: 300
+    },
+    height: {
+      type: Number,
+      default: 150
     }
   },
   data() {
@@ -33,11 +41,12 @@ export default {
       this.success(false)
     },
     start() {
+      const that = this;
       (function(window) {
         const l = 42 // 滑块边长
         const r = 10 // 滑块半径
-        const w = 300 // canvas宽度
-        const h = 155 // canvas高度
+        const w = that.width // canvas宽度
+        const h = that.height // canvas高度
         const PI = Math.PI
         const L = l + r * 2 // 滑块实际边长
         function getRandomNumberByRange(start, end) {
@@ -133,8 +142,11 @@ export default {
             const slider = createElement('div')
             const sliderIcon = createElement('span')
             const text = createElement('span')
+            const codeY = document.getElementsByClassName('codeY')[0]
+            codeY.style.cssText = `width:${that.width}px;position: relative`
             block.className = 'block'
             sliderContainer.className = 'sliderContainer'
+            sliderContainer.style.cssText = `width:${that.width}px`
             refreshIcon.className = 'refreshIcon'
             sliderMask.className = 'sliderMask'
             slider.className = 'slider'
@@ -299,7 +311,6 @@ export default {
           }
         }
       })(window)
-      const that = this
       // eslint-disable-next-line no-undef
       jigsaw.init({
         el: document.getElementById('captcha'),
@@ -355,7 +366,7 @@ export default {
     .sliderContainer {
         position: relative;
         text-align: center;
-        width: 310px;
+        // width: 310px;
         height: 40px;
         line-height: 40px;
         margin-top: 15px;
