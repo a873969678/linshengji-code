@@ -8,7 +8,7 @@
 </div>
 
 ## 组件参数
-<table style='width:100%'>
+<table style='width:100%;display: table;text-align: center;'>
   <tr>
     <th>参数</th>
     <th>说明</th>
