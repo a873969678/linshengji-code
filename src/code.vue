@@ -20,6 +20,10 @@ export default {
     height: {
       type: Number,
       default: 150
+    },
+    title: {
+      type: String,
+      default: '向右滑动滑块填充拼图'
     }
   },
   data() {
@@ -151,7 +155,7 @@ export default {
             sliderMask.className = 'sliderMask'
             slider.className = 'slider'
             sliderIcon.className = 'sliderIcon'
-            text.innerHTML = '向右滑动滑块填充拼图'
+            text.innerHTML = that.title
             text.className = 'sliderText'
             const el = this.el
             el.appendChild(canvas)
